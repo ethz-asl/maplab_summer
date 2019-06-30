@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 NCAMERA_FILE=$1
 IMU_FILE=$2
-LOCALIZATION_MAP_INPUT=$3
-ROSBAG=$4
-LOCALIZATION_MAP_OUTPUT=$5
+WHEEL_FILE=$3
+LOCALIZATION_MAP_INPUT=$4
+ROSBAG=$5
+LOCALIZATION_MAP_OUTPUT=$6
 REST=$@
 
 rosrun rovioli rovioli \
@@ -17,4 +18,6 @@ rosrun rovioli rovioli \
   --vio_localization_map_folder=$LOCALIZATION_MAP_INPUT \
   --save_map_folder=$LOCALIZATION_MAP_OUTPUT \
   --map_builder_save_image_as_resources=false \
-  --datasource_rosbag=$ROSBAG $REST
+  --datasource_rosbag=$ROSBAG \
+  --wheel_parameters=$WHEEL_FILE \
+  --use_wheel_odometry=true $REST
