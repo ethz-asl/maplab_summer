@@ -1,0 +1,11 @@
+id: 6a62c6daae103f4ff57a132d6f95cec2
+hardware_id: /imu0
+sensor_type: IMU
+sigmas:
+  acc_noise_density: 0.01
+  acc_bias_random_walk_noise_density: 0.0002
+  gyro_noise_density: 0.005
+  gyro_bias_random_walk_noise_density: 4e-6
+saturation_accel_max_mps2: 150.0
+saturation_gyro_max_radps: 7.5
+gravity_magnitude_mps2: 9.81
